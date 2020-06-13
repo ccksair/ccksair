@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>根据当前时间获取问候语</title>
+<style>
+</style>
+</head>
+<body>
+
+
+<script>
+function getTimeGreat() {
+    var h = (new Date()).getHours();
+    if (h >= 15 && h < 19)
+        return "下午好";
+    if (h >= 11 && h < 15)
+        return "中午好";
+    if (h >= 19 && h < 22)
+        return "晚上好";
+    if (h >= 22 && h <= 24 || h >= 0 && h < 6)
+        return "深夜好";
+    if (h >= 6 && h < 11)
+        return "早上好";
+}
+document.write(getTimeGreat());
+</script>
+
+</body>
+</html>
